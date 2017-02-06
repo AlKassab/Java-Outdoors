@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="672.0" prefWidth="205.0" styleClass="root" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.DrawerMenuHomeController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/drawermenuhome.css" />
+    </stylesheets>
+    <children>
+      <HBox prefHeight="75.0" prefWidth="203.0">
+         <children>
+            <Circle fx:id="imgTL" fill="WHITE" radius="30.0" stroke="#81aa2a" strokeType="INSIDE" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="10.0" top="8.0" />
+               </HBox.margin>
+            </Circle>
+            <VBox prefHeight="80.0" prefWidth="141.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label id="MyName" fx:id="myname" alignment="CENTER" prefHeight="17.0" prefWidth="141.0" text="My name" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Region prefHeight="15.0" prefWidth="141.0" />
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Region prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                           <image>
+                              <Image url="@../resource/profil.png" />
+                           </image></ImageView>
+                        <Region layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                           <image>
+                              <Image url="@../resource/message.png" />
+                           </image></ImageView>
+                        <Region layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
+                        <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="34.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                           <image>
+                              <Image url="@../resource/logout.png" />
+                           </image></ImageView>
+                        <Region layoutX="128.0" layoutY="10.0" prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator prefHeight="15.0" prefWidth="200.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Label id="Nav" alignment="CENTER" prefHeight="25.0" prefWidth="271.0" text="Navigation" VBox.vgrow="ALWAYS" />
+      <Separator prefHeight="15.0" prefWidth="200.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="AccBtn" mnemonicParsing="false" onAction="#AcceuilAction" onMouseEntered="#changecolorOnEnter1" onMouseExited="#changecolorOnExit1" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton" VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="AccImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/home.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t1" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="ACCEUIL">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+      </Button>
+      <Separator prefHeight="15.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="MemBtn" layoutX="13.0" layoutY="295.0" mnemonicParsing="false" onAction="#MembreAction" onMouseEntered="#changecolorOnEnter2" onMouseExited="#changecolorOnExit2" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="MemImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/user.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t2" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="MEMBRES">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+      </Button>
+      <Separator layoutX="10.0" layoutY="145.0" prefHeight="15.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="RonBtn" layoutX="10.0" layoutY="383.0" mnemonicParsing="false" onAction="#RondonneAction" onMouseEntered="#changecolorOnEnter3" onMouseExited="#changecolorOnExit3" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="RonImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/hike.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t3" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="RONDONNES">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+      </Button>
+      <Separator layoutX="10.0" layoutY="188.0" prefHeight="15.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="CamBtn" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="383.0" mnemonicParsing="false" onAction="#CampingAction" onMouseEntered="#changecolorOnEnter4" onMouseExited="#changecolorOnExit4" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="CamImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/camping.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t4" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="CAMPINGS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+      </Button>
+      <Separator layoutX="10.0" layoutY="231.0" prefHeight="15.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="AnnBtn" layoutX="10.0" layoutY="425.0" mnemonicParsing="false" onAction="#AnnonceAction" onMouseEntered="#changecolorOnEnter5" onMouseExited="#changecolorOnExit5" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="AnnImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/annonce.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t5" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="ANNONCES">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+      </Button>
+      <Separator layoutX="10.0" layoutY="280.0" prefHeight="15.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+      <Button fx:id="AprpBtn" layoutX="10.0" layoutY="520.0" mnemonicParsing="false" onAction="#AproposAction" onMouseEntered="#changecolorOnEnter6" onMouseExited="#changecolorOnExit6" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+         <graphic>
+            <StackPane prefHeight="70.0" prefWidth="130.0">
+               <children>
+                  <VBox prefHeight="61.0" prefWidth="123.0">
+                     <children>
+                        <HBox>
+                           <children>
+                              <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                              <ImageView fx:id="AprpImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <image>
+                                    <Image url="@../resource/apropos.png" />
+                                 </image>
+                              </ImageView>
+                              <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <Label fx:id="t6" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="A PROPOS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </graphic>
+         <VBox.margin>
+            <Insets left="3.0" />
+         </VBox.margin>
+      </Button>
+      <Separator layoutX="10.0" layoutY="578.0" prefHeight="8.0" prefWidth="203.0" visible="false" VBox.vgrow="ALWAYS" />
+   </children>
+   <effect>
+      <DropShadow offsetY="5.0" spread="0.11" />
+   </effect>
+</VBox>

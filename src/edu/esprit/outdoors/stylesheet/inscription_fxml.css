@@ -1,0 +1,163 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image: url("/edu/esprit/outdoors/resource/javafx.png");
+  -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+}
+
+
+#btn1 {
+  -fx-border-radius: 10px;
+  -fx-background-color: rgb(129, 170, 42);
+  -fx-position: absolute;
+  -fx-left: 191px;
+  -fx-top: 766px;
+  -fx-width: 168px;
+  -fx-height: 68px;
+  -fx-z-index: 58;
+  -fx-font-size: 20px;
+  -fx-font-family: "Helvetica Neue";
+  -fx-line-height: 1.2;
+  -fx-text-align: center;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+}
+
+#t1{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#t2{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#t3{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#t4{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#t5{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#t6{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+
+#d1{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#p1{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#p2{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#d1{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+  -fx-background-color: transparent;
+    
+}
+
+.combobox {
+    -fx-font-size: 17px;
+}
+
+
+#gouvernance{
+  -fx-text-fill: white;
+  -fx-font-size: 17px;
+    
+}
+
+#userval{
+  -fx-text-fill: red;
+  -fx-font-size: 17px;
+    
+}
+
+#l1{
+  -fx-font-size: 25px;
+  -fx-font-family: "Helvetica Neue";
+  -fx-line-height: 1.2;
+  -fx-text-align: center;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+}
+
+#l2{
+  -fx-font-size: 12px;
+  -fx-font-family: "Helvetica Neue";
+  -fx-line-height: 1.2;
+  -fx-text-align: center;
+  -fx-font-weight: regular;
+  -fx-text-fill: white;
+}
+
+#h1{
+  -fx-font-size: 12px;
+  -fx-font-family: "Helvetica Neue";
+  -fx-line-height: 1.2;
+  -fx-text-align: center;
+  -fx-font-weight: regular;
+  -fx-text-fill: rgb(129, 170, 42);
+    
+}
+
+.radio{
+    
+    -fx-text-fill: white;
+  -fx-font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

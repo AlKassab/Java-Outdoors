@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="351.0" maxWidth="282.0" minHeight="351.0" minWidth="282.0" prefHeight="351.0" prefWidth="282.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.InscriptionController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/inscription_Conex.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="20.0" layoutY="10.0" prefHeight="351.0" prefWidth="285.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="ConexL" alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="392.0" text="Inscription" />
+            <Region prefHeight="16.0" prefWidth="542.0" />
+            <Region layoutX="10.0" layoutY="41.0" prefHeight="15.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <JFXTextField fx:id="idtc" focusColor="#81aa2a" labelFloat="true" maxWidth="355.0" minWidth="149.0" prefHeight="31.0" prefWidth="355.0" promptText="Identifiant" styleClass="form" unFocusColor="WHITE" VBox.vgrow="ALWAYS" />
+            <Region prefHeight="18.0" prefWidth="200.0" />
+            <JFXTextField fx:id="nomc" focusColor="#81aa2a" labelFloat="true" layoutX="10.0" layoutY="10.0" maxWidth="357.0" minWidth="149.0" prefHeight="31.0" prefWidth="357.0" promptText="Nom complet" styleClass="form" unFocusColor="WHITE" VBox.vgrow="ALWAYS" />
+            <Region prefHeight="16.0" prefWidth="200.0" />
+            <JFXTextField fx:id="emailc" focusColor="#81aa2a" labelFloat="true" layoutX="10.0" layoutY="41.0" maxWidth="364.0" minWidth="149.0" prefHeight="31.0" prefWidth="364.0" promptText="E-Mail" styleClass="form" unFocusColor="WHITE" VBox.vgrow="ALWAYS" />
+            <Region prefHeight="16.0" prefWidth="200.0" />
+            <JFXPasswordField fx:id="mdpc" focusColor="#81aa2a" labelFloat="true" maxWidth="354.0" minWidth="153.0" prefHeight="31.0" prefWidth="354.0" promptText="Mot de passe" styleClass="form" unFocusColor="WHITE" VBox.vgrow="ALWAYS" />
+            <Region layoutX="10.0" layoutY="213.0" prefHeight="16.0" prefWidth="200.0" />
+            <JFXPasswordField fx:id="mdpc2" focusColor="#81aa2a" labelFloat="true" layoutX="10.0" layoutY="72.0" maxWidth="361.0" minWidth="153.0" prefHeight="31.0" prefWidth="361.0" promptText="Confirmer le mot de passe" styleClass="form" unFocusColor="WHITE" VBox.vgrow="ALWAYS" />
+            <Region prefHeight="16.0" prefWidth="200.0" />
+            <ComboBox id="gov" fx:id="govc" prefHeight="25.0" prefWidth="266.0" promptText="Votre gouvernorat">
+               <effect>
+                  <ColorAdjust brightness="0.51" contrast="1.0" hue="-0.32" saturation="-0.22" />
+               </effect>
+            </ComboBox>
+            <Region layoutX="10.0" layoutY="229.0" prefHeight="22.0" prefWidth="262.0" VBox.vgrow="ALWAYS" />
+            <HBox>
+               <children>
+                  <JFXButton id="btn1" fx:id="btn" defaultButton="true" onAction="#SinscrireAction" prefHeight="39.0" prefWidth="137.0" text="S'inscrire">
+                     <effect>
+                        <DropShadow spread="0.07" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Region prefHeight="36.0" prefWidth="10.0" HBox.hgrow="ALWAYS" />
+                  <Hyperlink onAction="#SinscrireHyper" prefHeight="20.0" prefWidth="88.0" text="j'ai déja compte?" textFill="#81aa2a">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="9.0" />
+                     </HBox.margin>
+                  </Hyperlink>
+                  <Region layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="31.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

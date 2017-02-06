@@ -1,0 +1,32 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#DrawerL{
+    
+    
+}
+
+#topb{
+    
+    -fx-background-color: white;
+}
+
+#Rech{
+    
+    -fx-border-color: #81aa2a;
+}
+
+#MenuBtnTR{
+    -fx-background-color: white;
+    
+}
+
+#nameTopRight{
+    
+    -fx-text-fill: black; 
+}

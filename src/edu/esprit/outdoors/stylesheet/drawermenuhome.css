@@ -1,0 +1,28 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.root {
+-fx-background-color: #1b1c19;
+}
+.Splitbouton{
+    
+    -fx-background-color: #1b1c19;
+}
+
+.Splitbouton:hover {
+    
+    -fx-background-color: #81aa2a;
+}
+.textInBtn{
+    
+    -fx-text-fill: #cbcbcb;
+}
+#MyName{
+    -fx-text-fill: #81aa2a;
+    
+}
+#Nav{
+    -fx-text-fill: #cbcbcb;
+    
+}
