@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.HomeController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/home.css" />
+    </stylesheets>
+   <children>
+      <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox id="topb" prefHeight="54.0" prefWidth="1280.0">
+               <children>
+                  <Region prefHeight="50.0" prefWidth="44.0" HBox.hgrow="NEVER" />
+                  <ImageView id="Logo" fx:id="logoC" fitHeight="34.0" fitWidth="133.0" onMouseClicked="#ReturnHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/outdoorslogowhite.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="11.0" />
+                     </HBox.margin></ImageView>
+                  <Region prefHeight="65.0" prefWidth="38.0" HBox.hgrow="NEVER" />
+                  <AnchorPane onMouseEntered="#changecoloronenter" onMouseExited="#chanfecoloronexit">
+                     <children>
+                        <ImageView fx:id="drawerimg" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0">
+                           <image>
+                              <Image url="@../resource/drawerC.png" />
+                           </image>
+                        </ImageView>
+                        <JFXHamburger id="Ham" fx:id="HamC" fillWidth="false" opacity="0.0" prefHeight="54.0" prefWidth="50.0" HBox.hgrow="NEVER" />
+                     </children>
+                  </AnchorPane>
+                  <Region prefHeight="65.0" prefWidth="344.0" HBox.hgrow="ALWAYS" />
+                  <TextField id="Rech" fx:id="rechC" prefHeight="29.0" prefWidth="251.0" promptText="Rechercher">
+                     <HBox.margin>
+                        <Insets top="14.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Region prefHeight="56.0" prefWidth="42.0" />
+                  <AnchorPane>
+                     <children>
+                        <StackPane layoutX="-4.0" prefHeight="34.0" prefWidth="40.0" HBox.hgrow="NEVER">
+                           <children>
+                              <StackPane alignment="BOTTOM_CENTER" prefHeight="38.0" prefWidth="40.0">
+                                 <children>
+                                    <ImageView id="notif" fx:id="messimg" accessibleRole="PAGINATION" fitHeight="28.0" fitWidth="27.0" onMouseClicked="#openMessFromtopBar" onMouseEntered="#changecolormessonenter" onMouseExited="#changecolormessonexit" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resource/message.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fill="#ff4646" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="cirlleNotif" StackPane.alignment="TOP_RIGHT">
+                                       <StackPane.margin>
+                                          <Insets bottom="10.0" left="15.0" />
+                                       </StackPane.margin>
+                                    </Circle>
+                                    <Label fx:id="messNum" text="1" textFill="WHITE">
+                                       <StackPane.margin>
+                                          <Insets bottom="13.0" left="24.0" />
+                                       </StackPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="9.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets top="18.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="43.0" prefWidth="40.0">
+                     <children>
+                        <StackPane prefHeight="36.0" prefWidth="40.0">
+                           <children>
+                              <StackPane alignment="BOTTOM_CENTER" prefHeight="50.0" prefWidth="30.0">
+                                 <children>
+                                    <ImageView id="notif" fx:id="notifimg" accessibleRole="BUTTON" fitHeight="39.0" fitWidth="33.0" onMouseClicked="#openNotifFromtopBar" onMouseEntered="#changecolornotifonenter" onMouseExited="#chnagecolornotifonexit" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resource/notif.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fill="#ff4646" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="cirlleNotif" StackPane.alignment="CENTER">
+                                       <StackPane.margin>
+                                          <Insets bottom="9.0" left="15.0" />
+                                       </StackPane.margin>
+                                    </Circle>
+                                    <Label fx:id="notifNum" text="1" textFill="WHITE">
+                                       <StackPane.margin>
+                                          <Insets bottom="15.0" left="17.0" />
+                                       </StackPane.margin>
+                                       <font>
+                                          <Font name="System Bold" size="9.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets top="14.0" />
+                                 </StackPane.margin>
+                              </StackPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+                  <Region prefHeight="56.0" prefWidth="25.0" />
+                  <MenuButton id="MenuBtnTR" mnemonicParsing="false" prefHeight="56.0" prefWidth="194.0">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#mesron" text="Mes Rondonnées                                " />
+                      <MenuItem mnemonicParsing="false" onAction="#mescam" text="Mes Campings            " />
+                        <MenuItem mnemonicParsing="false" onAction="#setting" text="Parametres" />
+                        <MenuItem mnemonicParsing="false" onAction="#logout" text="Se deconnecter" />
+                    </items>
+                     <graphic>
+                        <AnchorPane prefHeight="44.0" prefWidth="202.0">
+                           <children>
+                              <Label id="nameTopRight" fx:id="lblUsrName" layoutX="65.0" layoutY="7.0" prefHeight="28.0" prefWidth="114.0" text="My Name" AnchorPane.topAnchor="11.0">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Circle id="imgTR" fx:id="imgUsrTop" fill="WHITE" layoutX="15.0" layoutY="22.0" radius="24.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-0.0" />
+                           </children>
+                        </AnchorPane>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </MenuButton>
+                  <Region prefHeight="50.0" prefWidth="15.0" HBox.hgrow="NEVER" />
+               </children>
+            </HBox>
+            <Pane id="zina" prefHeight="3.0" prefWidth="1280.0" />
+            <ScrollPane fx:id="scollfromhome" fitToHeight="true" fitToWidth="true" prefHeight="738.0" prefWidth="1072.0" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+      <VBox layoutY="65.0" prefHeight="735.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Region prefHeight="59.0" prefWidth="205.0" VBox.vgrow="NEVER" />
+            <HBox VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXDrawer id="DrawerL" fx:id="DrawerC" defaultDrawerSize="205.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="735.0" prefWidth="205.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <AnchorPane id="gaga" fx:id="gaga" layoutX="1050.0" layoutY="462.0" prefHeight="338.0" prefWidth="234.0" style="-fx-background-color: ;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXTextField fx:id="villa" focusColor="#81aa2a" layoutX="40.0" layoutY="43.0" onMouseExited="#okThen" />
+            <VBox layoutX="34.0" layoutY="210.0">
+               <children>
+                  <Label id="lat" fx:id="lat" text="Latitude:" />
+                  <Label id="lon" fx:id="lon" text="Longitude:" />
+                  <Label id="tem" fx:id="tem" text="Temperature:" />
+                  <Label id="hum" fx:id="hum" text="Humidité:" />
+               </children>
+            </VBox>
+            <VBox layoutX="124.0" layoutY="210.0">
+               <children>
+                  <Label id="lat1" fx:id="lat1" text="-" />
+                  <Label id="lon1" fx:id="lon1" text="-" />
+                  <Label id="tem1" fx:id="tem1" text="-" />
+                  <Label id="hum1" fx:id="hum1" text="-" />
+               </children>
+            </VBox>
+            <ImageView fitHeight="104.0" fitWidth="149.0" layoutX="35.0" layoutY="93.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../resource/meteo-hausse.png" />
+               </image>
+               <effect>
+                  <Glow level="0.49" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

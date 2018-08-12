@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="bg4" prefHeight="627.0" prefWidth="1116.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.ACT_createController">
+   <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/act.css" />
+    </stylesheets>
+    
+    <children>
+      <Button fx:id="retour_create" layoutX="583.0" layoutY="497.0" mnemonicParsing="false" onAction="#doRetour_create" text="Retour" />
+      <TableView fx:id="advices" layoutX="43.0" layoutY="63.0" onMouseClicked="#Show" prefHeight="425.0" prefWidth="600.0" style="-fx-background-color: rgba(255,255, 255, 0.5);">
+        <columns>
+          <TableColumn fx:id="titre" prefWidth="180.0" text="Titre" />
+          <TableColumn fx:id="conseil" prefWidth="418.0" text="Conseil" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="updateDeleteForm1" layoutX="672.0" layoutY="65.0" prefHeight="331.0" prefWidth="404.0">
+         <children>
+            <JFXTextField fx:id="mytit1" layoutX="78.0" layoutY="20.0" style="-fx-background-color: rgba(255,255, 255, 0.5);">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Pane fx:id="taPane1" layoutX="76.0" layoutY="58.0" prefHeight="200.0" prefWidth="291.0" style="-fx-background-color: rgba(255,255, 255, 0.5);">
+               <children>
+                  <JFXTextArea fx:id="myta1" layoutX="8.0" layoutY="11.0" prefHeight="178.0" prefWidth="273.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            <Button fx:id="ajouter" layoutX="78.0" layoutY="268.0" mnemonicParsing="false" onAction="#doAj" text="Ajouter" />
+            <Label fx:id="titreAj" layoutX="26.0" layoutY="27.0" text="Titre">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="contenuAj" layoutX="8.0" layoutY="59.0" text="Contenu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="updateDeleteForm" layoutX="672.0" layoutY="65.0" prefHeight="331.0" prefWidth="404.0">
+         <children>
+            <Button fx:id="delete" layoutX="306.0" layoutY="269.0" mnemonicParsing="false" onAction="#doDel" text="Delete" />
+            <JFXTextField fx:id="mytit" layoutX="78.0" layoutY="20.0" style="-fx-background-color: rgba(255,255, 255, 0.5);">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <Pane fx:id="taPane" layoutX="76.0" layoutY="58.0" prefHeight="200.0" prefWidth="291.0" style="-fx-background-color: rgba(255,255, 255, 0.5);">
+               <children>
+                  <JFXTextArea fx:id="myta" layoutX="8.0" layoutY="11.0" prefHeight="178.0" prefWidth="273.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            <Button fx:id="update" layoutX="78.0" layoutY="268.0" mnemonicParsing="false" onAction="#doUp" text="Update" />
+            <Label fx:id="titreUp" layoutX="29.0" layoutY="27.0" text="Titre">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="contenuUp" layoutX="7.0" layoutY="58.0" text="Contenu">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="newbtn" layoutX="517.0" layoutY="497.0" mnemonicParsing="false" onAction="#doNew" text="New" />
+   </children>
+</AnchorPane>

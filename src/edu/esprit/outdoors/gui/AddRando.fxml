@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.NumberValidator?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.AddRandoController">
+   <stylesheets>
+      <URL value="@/edu/esprit/outdoors/stylesheet/drawermenuhome.css" />
+      <URL value="@/edu/esprit/outdoors/stylesheet/home.css" />
+   </stylesheets>
+   <children>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="1280.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="807.0" text="Organiser une randonnée" textAlignment="CENTER" textFill="#81aa2a">
+               <font>
+                  <Font name="Al Tarikh Regular" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="105.0" prefHeight="625.0" prefWidth="1280.0">
+         <children>
+            <VBox prefHeight="625.0" prefWidth="650.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="Lieu:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="gov" fx:id="lieu" prefHeight="30.0" prefWidth="465.0" promptText="Sélectionnez un lieu">
+                                 <effect>
+                                    <ColorAdjust brightness="0.51" contrast="1.0" hue="-0.32" saturation="-0.22" />
+                                 </effect>
+                              </ComboBox>
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="Date:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="date" defaultColor="#81aa2a" prefHeight="33.0" prefWidth="473.0" />
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="Heure:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="471.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <JFXDatePicker fx:id="heure" defaultColor="#81aa2a" prefHeight="33.0" prefWidth="465.0" showTime="true" />
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="Kilométrage:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="klm" focusColor="#81aa2a" />
+                              <RequiredFieldValidator />
+                              <NumberValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="210.0" prefHeight="102.0" prefWidth="644.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="Altitude:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="alt" focusColor="#81aa2a" />
+                              <NumberValidator />
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#81aa2a" height="464.0" stroke="BLACK" strokeType="INSIDE" width="7.0" />
+            <VBox prefHeight="625.0" prefWidth="626.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="    Type:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="gov" fx:id="type" prefHeight="30.0" prefWidth="465.0" promptText="Précisez le type:">
+                                 <effect>
+                                    <ColorAdjust brightness="0.51" contrast="1.0" hue="-0.32" saturation="-0.22" />
+                                 </effect>
+                              </ComboBox>
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="    Difficulté:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="gov" fx:id="diff" prefHeight="30.0" prefWidth="465.0" promptText="Précisez la difficulté:">
+                                 <effect>
+                                    <ColorAdjust brightness="0.51" contrast="1.0" hue="-0.32" saturation="-0.22" />
+                                 </effect>
+                              </ComboBox>
+                              <RequiredFieldValidator />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="591.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="    N° de places:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <RequiredFieldValidator />
+                              <JFXTextField fx:id="nbr" focusColor="#81aa2a" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="177.0" text="    Description:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <RequiredFieldValidator />
+                              <JFXTextArea fx:id="desc" focusColor="#81aa2a" maxWidth="479.0" minWidth="426.0" prefHeight="60.0" prefWidth="426.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="100.0" prefWidth="172.0" text="    Prix:">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="100.0" prefWidth="465.0">
+                           <children>
+                              <Label prefHeight="23.0" prefWidth="462.0">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                              </Label>
+                              <RequiredFieldValidator />
+                              <JFXTextField fx:id="prix" focusColor="#81aa2a" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="returnbtn" mnemonicParsing="false" onAction="#ReturnAction" onMouseEntered="#changecolorOnEnter2" onMouseExited="#changecolorOnExit2" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+                           <graphic>
+                              <StackPane prefHeight="70.0" prefWidth="130.0">
+                                 <children>
+                                    <VBox prefHeight="61.0" prefWidth="123.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                                <ImageView fx:id="MemImg" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <image>
+                                                      <Image url="@../../../../../../../Desktop/retour.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="t2" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="Retour" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </graphic>
+                        </Button>
+                        <Label prefHeight="80.0" prefWidth="34.0" />
+                        <Button fx:id="cancelbtn" mnemonicParsing="false" onAction="#CancelAction" onMouseEntered="#changecolorOnEnter2" onMouseExited="#changecolorOnExit2" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+                           <graphic>
+                              <StackPane prefHeight="70.0" prefWidth="130.0">
+                                 <children>
+                                    <VBox prefHeight="61.0" prefWidth="123.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                                <ImageView fx:id="MemImg1" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <image>
+                                                      <Image url="@../../../../../../../Desktop/annuler.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="t21" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="Annuler" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </graphic>
+                        </Button>
+                        <Label prefHeight="80.0" prefWidth="34.0" />
+                        <Button fx:id="addbtn" mnemonicParsing="false" onAction="#AddAction" onMouseEntered="#changecolorOnEnter2" onMouseExited="#changecolorOnExit2" prefHeight="80.0" prefWidth="193.0" styleClass="Splitbouton">
+                           <graphic>
+                              <StackPane prefHeight="70.0" prefWidth="130.0">
+                                 <children>
+                                    <VBox prefHeight="61.0" prefWidth="123.0">
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Region prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                                <ImageView fx:id="MemImg2" fitHeight="47.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="imageInBtn" VBox.vgrow="ALWAYS">
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                   <image>
+                                                      <Image url="@../../../../../../../Desktop/ajouter.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Region layoutX="60.0" layoutY="10.0" prefHeight="47.0" prefWidth="45.0" HBox.hgrow="ALWAYS" />
+                                             </children>
+                                          </HBox>
+                                          <Label fx:id="t22" alignment="CENTER" prefHeight="26.0" prefWidth="223.0" styleClass="textInBtn" text="Ajouter" textAlignment="CENTER">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </StackPane>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

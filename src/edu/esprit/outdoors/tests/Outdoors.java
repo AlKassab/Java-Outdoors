@@ -10,14 +10,10 @@ package edu.esprit.outdoors.tests;
 import com.sun.javaws.Main;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-import static javafx.application.Application.launch;
-import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
-import org.scenicview.ScenicView;
 /**
  *
  * @author WILLIAM
@@ -27,6 +23,7 @@ import org.scenicview.ScenicView;
 public class Outdoors extends Application {
     
     public static Main main;
+    public static Boolean isSplashLoaded = false;
     
     @Override
     public void start(Stage stage) throws Exception {

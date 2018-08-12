@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="738.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="edu.esprit.outdoors.controllers.MenuCampingController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/menucamping.css" />
+    </stylesheets>
+   <children>
+      <VBox id="will" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="381.0" prefWidth="472.0" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="447.0" AnchorPane.rightAnchor="446.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="1.0" layoutY="1.0" onAction="#ajout" opacity="0.74" prefHeight="97.0" prefWidth="472.0" styleClass="Buttonstyle" text="Ajouter Camping" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+               </children>
+            </AnchorPane>
+            <Separator prefWidth="200.0" />
+            <AnchorPane opacity="0.74">
+               <children>
+                  <JFXButton alignment="CENTER" contentDisplay="RIGHT" layoutX="1.0" layoutY="1.0" onAction="#invits" prefHeight="97.0" prefWidth="472.0" styleClass="Buttonstyle" text="Invitations" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+                  <ImageView fx:id="invit" fitHeight="30.0" fitWidth="30.0" layoutX="268.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.topAnchor="25.0">
+                     <image>
+                        <Image url="@../resource/invitationsC.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Separator layoutX="10.0" layoutY="103.0" prefWidth="200.0" />
+            <AnchorPane>
+               <children>
+                  <JFXButton alignment="CENTER" layoutX="1.0" layoutY="1.0" onAction="#mycamp" opacity="0.74" prefHeight="97.0" prefWidth="472.0" styleClass="Buttonstyle" text="Mes Campings" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+               </children>
+            </AnchorPane>
+            <Separator layoutX="10.0" layoutY="203.0" prefWidth="200.0" />
+            <AnchorPane>
+               <children>
+                  <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="1.0" onAction="#partic" opacity="0.74" prefHeight="97.0" prefWidth="472.0" styleClass="Buttonstyle" text="Participations" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

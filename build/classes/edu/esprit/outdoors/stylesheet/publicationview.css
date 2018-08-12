@@ -1,0 +1,42 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: white;
+}
+
+#button{
+    
+
+  -fx-background-color: rgb(129, 170, 42);
+  -fx-font-size: 12px;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+  -fx-background-radius: 5px ;
+    
+}
+
+.buttonupload{
+    
+  -fx-background-color: rgb(129, 170, 42);
+  -fx-background-radius: 5px ;
+}
+
+.textfield{
+    
+     -fx-border-color: #81aa2a;
+}
+
+#button:hover {
+    
+  -fx-background-color:#4d7002;
+
+}
+
+.buttonupload:hover {
+    
+  -fx-background-color:#4d7002;
+
+}

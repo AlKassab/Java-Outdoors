@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="739.0" prefWidth="1174.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.102" fx:controller="edu.esprit.outdoors.controllers.MembreController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/membre.css" />
+    </stylesheets>
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox id="leftborder" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER" />
+         </left>
+         <center>
+            <VBox id="centerborder" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="35.0" prefWidth="674.0" VBox.vgrow="NEVER" />
+                  <Separator prefWidth="200.0" />
+                  <HBox>
+                     <children>
+                        <Label id="membrelabel" prefHeight="17.0" prefWidth="71.0" text="Membres" />
+                        <Label id="nbrreslt" fx:id="nombreRslt" prefHeight="17.0" prefWidth="52.0" text="0" />
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <TextField id="textfiled" fx:id="search" prefHeight="30.0" prefWidth="674.0" promptText="Rechercher des membres" />
+                  <Separator prefWidth="200.0" />
+                  <JFXListView fx:id="listUser" prefHeight="663.0" prefWidth="674.0" VBox.vgrow="ALWAYS" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <right>
+            <VBox id="rightborder" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Region prefHeight="35.0" prefWidth="250.0" />
+                  <Separator prefWidth="200.0" />
+                  <ToggleButton fx:id="abonnemnt" mnemonicParsing="false" prefHeight="40.0" prefWidth="325.0" styleClass="togglebutton" text="Abonement">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="choix" />
+                     </toggleGroup>
+                  </ToggleButton>
+                  <Separator prefWidth="200.0" />
+                  <ToggleButton fx:id="abonne" mnemonicParsing="false" prefHeight="40.0" prefWidth="253.0" styleClass="togglebutton" text="Abonnés" toggleGroup="$choix" />
+                  <Separator prefWidth="200.0" />
+                  <ToggleButton fx:id="explore" mnemonicParsing="false" prefHeight="40.0" prefWidth="256.0" styleClass="togglebutton" text="Explorer" toggleGroup="$choix" />
+                  <Separator prefWidth="200.0" />
+                  <Label alignment="CENTER" prefHeight="46.0" prefWidth="250.0" styleClass="rechavancelabel" text="Recherche avancée" />
+                  <Separator prefWidth="200.0" />
+                  <Label prefHeight="17.0" prefWidth="252.0" styleClass="labelofcombo" text="Tirer par">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboTirerpar" prefHeight="25.0" prefWidth="266.0" styleClass="combobox" visibleRowCount="4">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Separator prefHeight="26.0" prefWidth="250.0" />
+                  <Label layoutX="25.0" layoutY="219.0" prefHeight="17.0" prefWidth="252.0" styleClass="labelofcombo" text="Gouvernorat">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboGouvernorat" layoutX="25.0" layoutY="236.0" prefHeight="25.0" prefWidth="266.0" styleClass="combobox" visibleRowCount="4">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Separator layoutX="10.0" layoutY="261.0" prefHeight="26.0" prefWidth="250.0" />
+                  <Label layoutX="25.0" layoutY="294.0" prefHeight="17.0" prefWidth="252.0" styleClass="labelofcombo" text="Type">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="comboType" layoutX="25.0" layoutY="311.0" prefHeight="25.0" prefWidth="266.0" styleClass="combobox" visibleRowCount="4">
+                     <VBox.margin>
+                        <Insets left="15.0" right="15.0" />
+                     </VBox.margin>
+                  </ComboBox>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

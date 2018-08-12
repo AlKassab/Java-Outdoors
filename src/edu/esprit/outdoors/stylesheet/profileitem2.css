@@ -1,0 +1,36 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#optionBtn{
+    
+    -fx-text-fill: white;
+    -fx-background-radius: 200px 200px 200px 200px ;
+    
+}
+
+#AnchorPane{
+    
+    -fx-background-radius: 50px;
+}
+
+#followbtn{
+    
+    -fx-background-color: #81aa2a;
+    -fx-text-fill: white;
+    -fx-background-radius: 0px ;
+    
+}
+
+
+#followbtn:hover{
+    
+    -fx-background-color: #4d7002;;
+    -fx-text-fill: white;
+    -fx-background-radius: 0px ;
+    
+}

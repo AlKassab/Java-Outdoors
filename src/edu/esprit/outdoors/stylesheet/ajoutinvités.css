@@ -1,0 +1,24 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+fx-background-image: url("/edu/esprit/outdoors/resource/invités.jpg");
+ -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+}
+.buttons{
+     -fx-background-color: #81aa2a;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.buttons:hover{
+    -fx-background-color: #4d7002;
+}
+#Etape{
+    -fx-background-color: #81aa2a;
+    -fx-text-fill: white;
+    -fx-font-size: 15px; 
+}

@@ -9,11 +9,16 @@ package edu.esprit.outdoors.controllers;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
+import static edu.esprit.outdoors.controllers.AuthentificationController.user;
+import edu.esprit.outdoors.iservices.IUtilisateurs;
 import edu.esprit.outdoors.models.Profil;
 import edu.esprit.outdoors.models.Utilisateurs;
 import edu.esprit.outdoors.services.UserService;
-import edu.esprit.outdoors.utils.Enum.Gouvernorat;
+import edu.esprit.outdoors.utils.Notifications;
+import edu.esprit.outdoors.utils.Validator;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,12 +26,18 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -49,6 +60,9 @@ public class InscriptionController implements Initializable {
 
     @FXML
     private JFXTextField nomc;
+    
+     @FXML
+    private JFXTextField prenomc;
 
     @FXML
     private ComboBox<String> govc;
@@ -65,7 +79,9 @@ public class InscriptionController implements Initializable {
     @FXML
     private JFXButton btn;
     
-    UserService UserS = new UserService();
+    
+    IUtilisateurs UserS = new UserService();
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -136,22 +152,50 @@ public class InscriptionController implements Initializable {
     }
     
      @FXML
-    void SinscrireAction(ActionEvent event) {
+    void SinscrireAction(ActionEvent event) throws IOException, SQLException {
         
          Utilisateurs u  = new Utilisateurs();
          Profil p = new Profil();
          
-       p.setNom(nomc.getText());
-       p.setGouvernorat(Gouvernorat.valueOf(govc.getValue()));
+         
+       u.setNom(nomc.getText());
+       u.setPrenom(prenomc.getText());
+       p.setGouvernorat((govc.getValue()));
        u.setEmail(emailc.getText());
        u.setId_Ut(idtc.getText());
        u.setMot_passe(mdpc.getText());
        
-       if ((validateEmail(emailc.getText()))== true &&(confirmPassW(mdpc.getText(),mdpc2.getText()))==true){
+       if (((Validator.emailvalidator(emailc.getText()))== true) &&((Validator.confirmPassW(mdpc.getText(),mdpc2.getText()))==true)&&(UserS.checkforusername(idtc.getText())==false)){
        UserS.add(u,p);
-       }else{
-       System.out.println("mail invalid ou mot de passe nest pas le meme");
-       }
+       AuthentificationController.user = u;
+        Notifications.notifApi("Terminé", "Vous etes maintenant inscris");
+       }else if (Validator.emailvalidator(emailc.getText())==false) {
+        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText("Email-format invalide");
+        alert.setContentText("Adresse e-mail incorrecte");
+        alert.showAndWait();
+        
+        }else if (Validator.confirmPassW(mdpc.getText(),mdpc2.getText())==false) {
+        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText("Mot de passe ne sont pas identique");
+        alert.setContentText("Mot de passe ne sont pas identique");
+        alert.showAndWait();
+        
+        }
+       else if (UserS.checkforusername(idtc.getText())==true) {
+        
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Erreur");
+        alert.setHeaderText("Username deja existe");
+        alert.setContentText("Choisir un autre username");
+        alert.showAndWait();
+        
+        }
+        
        
         
         
@@ -163,19 +207,5 @@ public class InscriptionController implements Initializable {
 
     }
     
-    private boolean validateEmail(String email){
-    
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
-        Pattern pattern = Pattern.compile(regex);
- 
-    Matcher matcher = pattern.matcher(email);
-    return matcher.find();
- 
-    }
-    
-    private boolean confirmPassW(String pass,String passc){
-    
-    return pass.equals(passc);
-    }
     
 }

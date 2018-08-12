@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="1085.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.GestionAnnonceController">
+ <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/bouttonajout.css" />
+    </stylesheets>  
+     <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/tableView.css" />
+    </stylesheets>  
+    <children>
+      <TableView id="table-view" fx:id="afficheA" layoutX="42.0" layoutY="238.0" prefHeight="748.0" prefWidth="1174.0">
+        <columns>
+          <TableColumn fx:id="TitreA" prefWidth="181.0" styleClass="table-row-cell" text="TITRE" />
+          <TableColumn fx:id="TypeA" prefWidth="153.0" text="TYPE" />
+            <TableColumn fx:id="DescA" prefWidth="623.0" text="DESCRIPTION" />
+            <TableColumn fx:id="PrixA" prefWidth="125.0" text="PRIX" />
+        </columns>
+      </TableView>
+      <Button layoutX="148.0" layoutY="81.0" mnemonicParsing="false" onAction="#ajouterAnnonce" prefHeight="51.0" prefWidth="181.0" styleClass="btn1" text="Ajouter une annonce" />
+      <Button layoutX="979.0" layoutY="81.0" mnemonicParsing="false" onAction="#consulterMesAnnonce" prefHeight="51.0" prefWidth="181.0" styleClass="btn1" text="Consulter mes annonces" />
+      <Label layoutX="77.0" layoutY="182.0" text="Liste des annonces disponibles " textFill="#0b790b">
+         <font>
+            <Font name="Comic Sans MS Bold" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="576.0" layoutY="81.0" mnemonicParsing="false" onAction="#rechercheAnnonce" prefHeight="51.0" prefWidth="181.0" styleClass="btn1" text="Rechercher des  annonces" />
+   </children>
+</AnchorPane>

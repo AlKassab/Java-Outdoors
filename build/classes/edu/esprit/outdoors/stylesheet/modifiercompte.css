@@ -1,0 +1,72 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+.okbtn{
+    
+   -fx-background-color: #81aa2a;
+  -fx-font-size: 12px;
+  -fx-text-fill: white;
+  -fx-background-radius: 0px ;
+}
+
+.okbtn:hover{
+    
+  -fx-background-color:#4d7002;
+  -fx-font-size: 12px;
+  -fx-text-fill: white;
+  -fx-background-radius: 0px ;
+}
+
+.index{
+    
+  -fx-font-size: 14px;
+  -fx-text-fill: #383838;
+  -fx-font-weight: bold;
+    
+}
+
+.hyper{
+    
+  -fx-font-size: 12px;
+  -fx-text-fill: #81aa2a;
+    
+}
+
+.txt{
+    
+    -fx-border-color: white;
+    -fx-background-radius: 0px ;
+    
+}
+
+
+#suppbtn{
+    
+   -fx-background-color: #e40000;
+  -fx-font-size: 12px;
+  -fx-text-fill: white;
+  -fx-background-radius: 0px ;
+    
+}
+
+#suppbtn:hover{
+    
+  -fx-background-color:#8a0000;
+  -fx-font-size: 12px;
+  -fx-text-fill: white;
+  -fx-background-radius: 0px ;
+}
+
+
+
+
+
+
+
+

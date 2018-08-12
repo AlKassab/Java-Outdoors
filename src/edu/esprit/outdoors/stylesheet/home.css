@@ -13,20 +13,32 @@
 
 #topb{
     
-    -fx-background-color: white;
+    -fx-background-color: #81aa2a;
 }
 
 #Rech{
     
     -fx-border-color: #81aa2a;
+    -fx-background-color: #c6d99f;
+    -fx-background-radius: 200px ;
+    -fx-prompt-text-fill: white;
+    
 }
 
 #MenuBtnTR{
-    -fx-background-color: white;
+    -fx-background-color: #81aa2a;
     
 }
 
 #nameTopRight{
     
-    -fx-text-fill: black; 
+    -fx-text-fill: white; 
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    
+}
+
+#zina{
+    
+    -fx-background-color: #486805;
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="306.0" prefWidth="222.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.102" fx:controller="edu.esprit.outdoors.controllers.ActuaController">
+    
+     <children>
+      <JFXTextField fx:id="villa" layoutX="40.0" layoutY="43.0" onMouseExited="#okThen" />
+      <VBox layoutX="23.0" layoutY="150.0">
+         <children>
+            <Label id="lat" fx:id="lat" text="Latitude:" />
+            <Label id="lon" fx:id="lon" text="Longitude:" />
+            <Label id="tem" fx:id="tem" text="Temperature:" />
+            <Label id="hum" fx:id="hum" text="Humidité:" />
+         </children>
+      </VBox>
+      <VBox layoutX="113.0" layoutY="150.0">
+         <children>
+            <Label id="lat1" fx:id="lat1" text="-" />
+            <Label id="lon1" fx:id="lon1" text="-" />
+            <Label id="tem1" fx:id="tem1" text="-" />
+            <Label id="hum1" fx:id="hum1" text="-" />
+         </children>
+      </VBox>
+   </children>
+    
+</AnchorPane>

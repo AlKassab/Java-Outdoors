@@ -1,0 +1,33 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color:transparent;
+}
+#btn2 {
+  -fx-border-radius: 10px;
+  -fx-background-color: rgb(129, 170, 42);
+  -fx-position: absolute;
+  -fx-width: 168px;
+  -fx-height: 68px;
+  -fx-z-index: 58;
+  -fx-font-size: 12px;
+  -fx-font-family: "/edu/esprit/outdoors/utils/Helvetica Neue";
+  -fx-line-height: 1.2;
+  -fx-font-weight: bold;
+  -fx-text-fill: white;
+  -fx-background-radius: 200px ;
+}
+
+#btn2:hover {
+    
+  -fx-background-color:#4d7002;
+
+}
+#InscriptionL{
+    
+    -fx-text-fill: rgb(129, 170, 42);
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}

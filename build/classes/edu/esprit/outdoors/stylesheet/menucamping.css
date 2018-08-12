@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-image: url("/edu/esprit/outdoors/resource/backgroundcampings.jpg");
+ -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+}
+.Buttonstyle{
+    
+    -fx-background-color: #81aa2a;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+}
+.Buttonstyle:hover{
+   -fx-background-color: #4d7002;
+   
+}

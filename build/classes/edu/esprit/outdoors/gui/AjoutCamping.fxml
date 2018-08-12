@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="738.0" prefWidth="1366.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.AjoutCampingController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/ajoutcamping.css" />
+    </stylesheets>
+   <children>
+      <VBox prefHeight="397.0" prefWidth="560.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label id="titre" alignment="CENTER" prefHeight="17.0" prefWidth="776.0" text="Ajout Camping" textFill="#8da424" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nom" opacity="0.74" promptText="Ajouter nom">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </Separator>
+            <TextField fx:id="lieu" layoutX="10.0" layoutY="10.0" opacity="0.74" promptText="Ajouter lieu">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </TextField>
+            <Separator layoutX="10.0" layoutY="35.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </Separator>
+            <DatePicker fx:id="date" opacity="0.74" prefHeight="25.0" prefWidth="673.0" promptText="Ajouter date">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </DatePicker>
+            <Separator layoutX="10.0" layoutY="35.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </Separator>
+            <TextArea fx:id="description" opacity="0.74" prefHeight="78.0" prefWidth="560.0" promptText="Ajouter Description">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </TextArea>
+            <Separator layoutX="10.0" layoutY="35.0" prefWidth="200.0" visible="false" />
+            <HBox prefHeight="302.0" prefWidth="704.0">
+               <children>
+                  <VBox prefHeight="302.0" prefWidth="149.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#Next" prefHeight="25.0" prefWidth="149.0" styleClass="buttons" text="Trouver Destination" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <AnchorPane fx:id="IDAnchorpane" prefHeight="302.0" prefWidth="567.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#Enregistrement" prefHeight="38.0" prefWidth="108.0" styleClass="buttons" text="Enregistrer">
+               <VBox.margin>
+                  <Insets left="605.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

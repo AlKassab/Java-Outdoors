@@ -1,0 +1,46 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+    -fx-background-color: white;
+}
+
+#rightborder{
+    
+    -fx-background-color: white;
+}
+#membrelabel{
+    -fx-text-fill: #81aa2a;
+    -fx-font-size:15px;
+        -fx-font-weight : bold;
+
+}
+#nbrreslt{
+    -fx-text-fill: #777777;
+    -fx-font-size:15px;
+        -fx-font-weight : bold;
+}
+#textfiled{
+    -fx-border-color: #81aa2a;
+}
+#centerborder{
+    -fx-background-color: white;
+}
+.rechavancelabel{
+    -fx-text-fill: #777777;
+    -fx-font-size:14px;
+        -fx-font-weight : bold;
+
+}
+.labelofcombo{
+    -fx-text-fill: #81aa2a;
+    -fx-font-size:12px;
+    -fx-font-weight : bold;
+}
+.togglebutton{
+     -fx-text-fill: white;
+    -fx-font-size:15px;
+        -fx-font-weight : bold;
+}

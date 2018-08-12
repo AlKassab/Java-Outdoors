@@ -1,0 +1,45 @@
+#bg1, #bg2, #bg3{
+    -fx-background-image: url("/edu/esprit/outdoors/resource/backgroundcampings.jpg");
+      -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+
+}
+
+#bg4{
+  -fx-background-image: url("/edu/esprit/outdoors/resource/cr.jpg");
+  -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+
+}
+
+#pap{
+  -fx-background-image: url("/edu/esprit/outdoors/resource/paper.png");
+  -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+
+    
+}
+
+#rep   {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+#labels:hover{
+   -fx-background-color: #fbad1b; 
+   -fx-text-decoration-line: underline ;
+  
+   -fx-text-underline-position:below; 
+}
+
+#labels:pressed{
+    -fx-background-color: #01e5a7; 
+ 
+}
+

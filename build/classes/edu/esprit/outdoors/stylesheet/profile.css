@@ -1,0 +1,45 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+-fx-background-color: white;
+}
+
+#profileshortdetailbckgrd{
+    
+    -fx-background-color: white;
+}
+
+#profilName{
+    
+    -fx-text-fill: white;
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+}
+
+#govLabel{
+    
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    
+}
+
+#sperator{
+    
+      -fx-background-color: #81aa2a;
+}
+#profile2{
+    
+    -fx-background-radius: 50px ;
+}
+
+.update:hover{
+    
+    -fx-background-color:#4d7002;
+}
+#listeview{
+          -fx-background-color: white;
+
+    
+}

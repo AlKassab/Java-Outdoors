@@ -6,24 +6,24 @@
 
 package edu.esprit.outdoors.controllers;
 
-import edu.esprit.outdoors.controllers.HomeController;
-import edu.esprit.outdoors.services.UserService;
-import static edu.esprit.outdoors.services.UserService.user;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SplitMenuButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
-import edu.esprit.outdoors.controllers.AuthentificationController;
-import javafx.fxml.FXMLLoader;
 
 /**
  * FXML Controller class
@@ -96,6 +96,16 @@ public class DrawerMenuHomeController implements Initializable {
     
     @FXML
     private Label myname;
+    
+    @FXML
+    private ImageView profilimg;
+
+    @FXML
+    private ImageView messgimg;
+
+    @FXML
+    private ImageView logoutimg;
+
      
     Image image = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/homew.png"));
     Image image1 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/userw.png"));
@@ -109,6 +119,13 @@ public class DrawerMenuHomeController implements Initializable {
     Image image33 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/camping.png"));
     Image image44 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/annonce.png"));
     Image image55 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/apropos.png"));
+    
+    Image image6 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/profil.png"));
+    Image image66 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/profilW.png"));
+    Image image7 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/logout.png"));
+    Image image77 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/logoutW.png"));
+    Image image8 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/message1.png"));
+    Image image88 = new Image(getClass().getResourceAsStream("/edu/esprit/outdoors/resource/messageW.png"));
 
         
 
@@ -116,7 +133,11 @@ public class DrawerMenuHomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        myname.setText(AuthentificationController.user.getProfil().getNom());
+        myname.setText(AuthentificationController.user.getPrenom()+" "+AuthentificationController.user.getNom());
+         Image image = AuthentificationController.user.getProfil().getPhoto_profil();
+       ImagePattern imagepattern = new ImagePattern(image); 
+       
+       imgTL.setFill(imagepattern);
         
     }   
     
@@ -124,6 +145,14 @@ public class DrawerMenuHomeController implements Initializable {
        @FXML
     void AcceuilAction(ActionEvent event) {
        
+         try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/HomePublication.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
        
         
     }
@@ -131,6 +160,14 @@ public class DrawerMenuHomeController implements Initializable {
     @FXML
     void AnnonceAction(ActionEvent event) {
 
+         try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/GestionAnnonce.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
     }
 
     @FXML
@@ -140,16 +177,80 @@ public class DrawerMenuHomeController implements Initializable {
 
     @FXML
     void CampingAction(ActionEvent event) {
+        
+        try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/MenuCamping.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(MenuCampingController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    
 
     }
 
     @FXML
     void MembreAction(ActionEvent event) {
-
+            
+          try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/Membre.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
+       
+        
     }
 
     @FXML
     void RondonneAction(ActionEvent event) {
+
+        try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/lstRando.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    }
+    
+    
+    @FXML
+    void logout(MouseEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    void message(MouseEvent event) {
+        
+        try {
+                    VBox vbox = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/listePublication.fxml")); 
+                    HomeController.scollfromhomep.setContent(vbox);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+        
+        
+
+    }
+
+    @FXML
+    void profile(MouseEvent event) {
+        
+         try {
+                    AnchorPane pane = FXMLLoader.load(getClass().getResource("/edu/esprit/outdoors/gui/Profile.fxml")); 
+                    HomeController.scollfromhomep.setContent(pane);
+                    
+                    
+         } catch (IOException ex) {
+                    Logger.getLogger(Inscription_Conex_Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
 
     }
 
@@ -227,4 +328,33 @@ public class DrawerMenuHomeController implements Initializable {
     }
 
     
+    @FXML
+    void ccoelogout(MouseEvent event) {
+         logoutimg.setImage(image7);
+    }
+
+    @FXML
+    void ccoemess(MouseEvent event) {
+         messgimg.setImage(image8);
+    }
+
+    @FXML
+    void ccoeprofil(MouseEvent event) {
+         profilimg.setImage(image6);
+    }
+
+    @FXML
+    void ccoilogout(MouseEvent event) {
+         logoutimg.setImage(image77);
+    }
+
+    @FXML
+    void ccoimess(MouseEvent event) {
+         messgimg.setImage(image88);
+    }
+
+    @FXML
+    void ccoiprofil(MouseEvent event) {
+         profilimg.setImage(image66);
+}
 }

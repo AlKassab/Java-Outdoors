@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorprofile" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="742.0" prefWidth="270.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.Profileitem2Controller">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/profileitem2.css" />
+    </stylesheets>
+   <children>
+      <VBox id="profileshortdetailbckgrd" layoutX="132.0" layoutY="10.0" prefHeight="676.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="ImgContainer" prefHeight="255.0" prefWidth="270.0">
+               <children>
+                  <AnchorPane prefHeight="54.0" prefWidth="61.0" />
+                  <Pane fx:id="profilpic" layoutX="15.0" layoutY="14.0" prefHeight="168.0" prefWidth="198.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="7.0" />
+                  <AnchorPane prefHeight="40.0" prefWidth="40.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="115.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/optionicon.png" />
+                           </image>
+                        </ImageView>
+                        <MenuButton id="optionBtn" fx:id="optiontprofile" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="-3.0" mnemonicParsing="false" opacity="0.0" prefHeight="40.0" prefWidth="40.0">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#chnagerphoto" text="Changer photo" />
+                              <MenuItem mnemonicParsing="false" onAction="#MesRond" text="Mes rondonnes" />
+                              <MenuItem mnemonicParsing="false" onAction="#MesCamping" text="Mes Campings" />
+                              <MenuItem mnemonicParsing="false" onAction="#Settings" text="Parametres" />
+                           </items>
+                        </MenuButton>
+                        <MenuButton id="optionBtn" fx:id="optiontouser" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="..." visible="false">
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#Sendmess" text="Envoyer un message" />
+                              <MenuItem mnemonicParsing="false" onAction="#Invite" text="Inviter à" />
+                            <MenuItem mnemonicParsing="false" onAction="#Signaler" text="Signaler" />
+                            <MenuItem mnemonicParsing="false" onAction="#bloquer" text="Bloquer" />
+                          </items>
+                        </MenuButton>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <Separator prefHeight="17.0" prefWidth="321.0" />
+            <HBox>
+               <children>
+                  <Region layoutX="173.0" layoutY="10.0" prefHeight="47.0" prefWidth="70.0" HBox.hgrow="ALWAYS" />
+                  <AnchorPane>
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <ToggleButton id="followbtn" fx:id="followbtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#followBtn" prefHeight="47.0" prefWidth="183.0" text="Suivre" />
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="47.0" fitWidth="44.0" opacity="0.33" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="2.0">
+                           <image>
+                              <Image url="@../resource/plus.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Region prefHeight="47.0" prefWidth="70.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="335.0" prefHeight="18.0" prefWidth="321.0" />
+            <HBox prefHeight="60.0" prefWidth="247.0">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="64.0" prefWidth="139.0" styleClass="StaticLabel" text="Abonnés" />
+                        <Label fx:id="nbrabones" alignment="CENTER" prefHeight="60.0" prefWidth="176.0" styleClass="StaticLabel" text="0" />
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="60.0" prefWidth="15.0" />
+                  <VBox>
+                     <children>
+                        <Label alignment="CENTER" prefHeight="60.0" prefWidth="171.0" styleClass="StaticLabel" text="Abonnement   " />
+                        <Label fx:id="nbrAbonemnt" alignment="CENTER" prefHeight="59.0" prefWidth="164.0" styleClass="StaticLabel" text="0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="399.0" prefHeight="18.0" prefWidth="321.0" />
+            <HBox layoutX="10.0" layoutY="447.0" prefHeight="40.0" prefWidth="273.0">
+               <children>
+                  <Region prefHeight="40.0" prefWidth="67.0" />
+                  <HBox prefHeight="30.0" prefWidth="104.0">
+                     <children>
+                        <ImageView fx:id="oneStar" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/star.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="twoStar" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/star.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="threeStar" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/star.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="fourstar" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/star.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="fivestar" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/star.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="nbrAvis" alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="22.0" styleClass="StaticLabel" text="0  " HBox.hgrow="ALWAYS" />
+                  <Label layoutX="165.0" layoutY="10.0" prefHeight="42.0" prefWidth="27.0" styleClass="StaticLabel" text="Avis" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="477.0" prefHeight="18.0" prefWidth="321.0" />
+            <Label prefHeight="37.0" prefWidth="198.0" text="Deriniers avis">
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/star1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets left="15.0" />
+               </VBox.margin>
+            </Label>
+            <TableView prefHeight="230.0" prefWidth="270.0">
+              <columns>
+                <TableColumn id="avistable" fx:id="avistable" prefWidth="214.0" text="C1" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow height="29.9" radius="12.225" spread="0.14" />
+   </effect>
+</AnchorPane>

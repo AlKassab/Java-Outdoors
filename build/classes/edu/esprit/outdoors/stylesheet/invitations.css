@@ -1,0 +1,18 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+ -fx-background-image: url("/edu/esprit/outdoors/resource/backgroundcampings.jpg");
+ -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center;
+}
+#bor1{
+   -fx-background-image: url("/edu/esprit/outdoors/resource/aurora.png");
+ -fx-background-attachment: fixed;
+  -fx-background-size: cover;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center center; 
+}

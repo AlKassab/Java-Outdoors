@@ -41,17 +41,17 @@
                   <HBox VBox.vgrow="ALWAYS">
                      <children>
                         <Region prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="profilimg" fitHeight="18.0" fitWidth="18.0" onMouseClicked="#profile" onMouseEntered="#ccoiprofil" onMouseExited="#ccoeprofil" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                            <image>
                               <Image url="@../resource/profil.png" />
                            </image></ImageView>
                         <Region layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="20.0" fitWidth="18.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="messgimg" fitHeight="20.0" fitWidth="18.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#message" onMouseEntered="#ccoimess" onMouseExited="#ccoemess" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                            <image>
-                              <Image url="@../resource/message.png" />
+                              <Image url="@../resource/message1.png" />
                            </image></ImageView>
                         <Region layoutX="10.0" layoutY="10.0" prefHeight="24.0" prefWidth="24.0" HBox.hgrow="ALWAYS" />
-                        <ImageView fitHeight="19.0" fitWidth="18.0" layoutX="34.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                        <ImageView fx:id="logoutimg" fitHeight="19.0" fitWidth="18.0" layoutX="34.0" layoutY="10.0" onMouseClicked="#logout" onMouseEntered="#ccoilogout" onMouseExited="#ccoelogout" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
                            <image>
                               <Image url="@../resource/logout.png" />
                            </image></ImageView>

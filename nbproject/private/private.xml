@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/models/Utilisateurs.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/DrawerMenuHomeController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/models/Profil.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/services/UserService.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/services/ProfilServices.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/PublicationInProfilController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/models/Publication.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/InscriptionController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/HomePublicationController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/Inscription_Conex_Controller.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/AuthentificationController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/HomeController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/iservices/IUtilisateurs.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/MembreController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/ModifierCompteController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/ProfileController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/PublicationviewController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/services/PublicationService.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/iservices/IPhoto.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/iservices/IPublication.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/models/Photo.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/services/PhotoService.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/technique/DbConnection.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/technique/UploadImage.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/Profileitem2Controller.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/PublicationResultController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/WelcomeScreenController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/iservices/Iprofil.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/controllers/MapApiController.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/services/CampingService.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/iservices/ICamping.java</file>
+            <file>file:/C:/Users/WILLIAM/Documents/Netbeans/Outdoors/src/edu/esprit/outdoors/models/Camping.java</file>
+        </group>
+    </open-files>
+</project-private>

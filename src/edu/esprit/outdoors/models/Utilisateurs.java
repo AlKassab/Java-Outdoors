@@ -5,7 +5,7 @@
  */
 package edu.esprit.outdoors.models;
 
-import edu.esprit.outdoors.utils.Enum.Gouvernorat;
+
 
 /**
  *
@@ -17,14 +17,20 @@ public class Utilisateurs {
      private String email;
      private String mot_passe;
      private String id_Ut;
+     private String nom;
+     private String prenom;
      private Profil profil;
+     private int money;
 
-    public Utilisateurs(int id_user, String email, String mot_passe, String id_Ut, Profil profil) {
+   
+    public Utilisateurs(int id_user, String email, String mot_passe,String nom, String prenom, String id_Ut, Profil profil) {
         this.id_user = id_user;
         this.email = email;
         this.mot_passe = mot_passe;
         this.id_Ut = id_Ut;
         this.profil = profil;
+         this.nom = nom;
+        this.prenom = prenom;
     }
 
     public Utilisateurs(String id_Ut, Profil profil) {
@@ -77,8 +83,34 @@ public class Utilisateurs {
     public void setId_Ut(String id_Ut) {
         this.id_Ut = id_Ut;
     }
+ public String getNom() {
+        return nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    @Override
+    public String toString() {
+        return "Utilisateurs{" + "id_user=" + id_user + ", email=" + email + ", mot_passe=" + mot_passe + ", id_Ut=" + id_Ut + ", profil=" + profil + '}';
+    }
      
-     
+     public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
      
      
     

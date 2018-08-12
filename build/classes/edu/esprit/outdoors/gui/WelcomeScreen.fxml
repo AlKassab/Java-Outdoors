@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="edu.esprit.outdoors.controllers.WelcomeScreenController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/welcomescreen.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="528.0" fitWidth="800.0" layoutX="127.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../resource/welcome.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

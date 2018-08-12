@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="838.0" prefWidth="646.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.esprit.outdoors.controllers.ModifierCompteController">
+    <stylesheets>
+        <URL value="@/edu/esprit/outdoors/stylesheet/modifiercompte.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="141.0" layoutY="124.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <HBox prefHeight="59.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="Nom complet" />
+                  <VBox HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextField fx:id="name" editable="false" prefHeight="29.0" prefWidth="170.0" styleClass="txt" />
+                        <Button fx:id="namebtn" mnemonicParsing="false" onAction="#savename" prefHeight="25.0" prefWidth="35.0" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#changername" prefHeight="61.0" prefWidth="143.0" styleClass="hyper" text="Changer" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="59.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="Email" />
+                  <VBox>
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextField fx:id="email" editable="false" prefHeight="29.0" prefWidth="335.0" styleClass="txt" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="mailbtn" mnemonicParsing="false" onAction="#savemail" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#changermail" prefHeight="61.0" prefWidth="143.0" styleClass="hyper" text="Changer" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="69.0" prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="72.0" prefHeight="110.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="Mot de passe" />
+                  <VBox prefHeight="80.0" prefWidth="335.0">
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <PasswordField fx:id="passactu" promptText="Mot de passe actuel" styleClass="txt" visible="false" />
+                        <Separator prefWidth="200.0" visible="false" />
+                        <PasswordField fx:id="nvpass" layoutX="10.0" layoutY="10.0" promptText="Nouvel mot de passe" styleClass="txt" visible="false" />
+                        <Separator prefWidth="200.0" visible="false" />
+                        <PasswordField fx:id="nvpassc" layoutX="10.0" layoutY="35.0" promptText="Confirmer mot de passe" styleClass="txt" visible="false" />
+                        <Button fx:id="passbtn" mnemonicParsing="false" onAction="#savepass" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#changerpass" prefHeight="61.0" prefWidth="143.0" styleClass="hyper" text="Changer" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="183.0" prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="330.0" prefHeight="59.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="Gouvernorat" />
+                  <VBox>
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <ComboBox fx:id="gouvernorat" prefHeight="25.0" prefWidth="335.0" />
+                        <Button fx:id="govbtn" mnemonicParsing="false" onAction="#savegov" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="327.0" prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="98.0" prefHeight="59.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="Numero Tel" />
+                  <VBox>
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextField fx:id="tel" editable="false" prefHeight="29.0" prefWidth="335.0" styleClass="txt" />
+                        <Button fx:id="telbtn" mnemonicParsing="false" onAction="#savetel" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#changertel" prefHeight="61.0" prefWidth="143.0" styleClass="hyper" text="Changer" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="131.0" prefWidth="200.0" />
+            <HBox layoutX="10.0" layoutY="98.0" prefHeight="175.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="59.0" prefWidth="128.0" styleClass="index" text="A propos de vous" />
+                  <VBox prefHeight="85.0" prefWidth="335.0">
+                     <HBox.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                     </HBox.margin>
+                     <children>
+                        <TextArea fx:id="bio" editable="false" prefHeight="200.0" prefWidth="335.0" styleClass="txt" />
+                        <Button fx:id="descbtn" mnemonicParsing="false" onAction="#savedesc" styleClass="okbtn" text="OK" visible="false">
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#changerdesc" prefHeight="61.0" prefWidth="143.0" styleClass="hyper" text="Changer" />
+               </children>
+            </HBox>
+            <Separator layoutX="10.0" layoutY="183.0" prefWidth="200.0" />
+            <HBox prefHeight="36.0" prefWidth="442.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button id="suppbtn" mnemonicParsing="false" onAction="#supprimercompte" prefHeight="36.0" prefWidth="140.0" text="Supprimer le compte" />
+                  <Hyperlink alignment="CENTER_RIGHT" onAction="#guide" prefHeight="35.0" prefWidth="467.0" styleClass="hyper" text=" Devenir un guide" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
